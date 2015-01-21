@@ -7,9 +7,18 @@ $(document).on('ready', function() {
 	console.log(letterCapitalize('hi whats up?'));
 
 	var wordCount = function(str){
-		return Gstr.match(/\w+/g).length;
+		return str.match(/\w+/g).length;
 	};
 
 	console.log(wordCount('hi whats up?'));
+
+	var primeTime = function(n){
+		if (n<=2 || isNaN(n) || !isFinite || !(n % 1 == 0) || n % 2 == 0) return false;
+		for (var i = 3; i < Math.sqrt(n); i+=2) {
+			if (n % i == 0) return false;
+		}
+		return true;
+	};
+	console.log(primeTime(11));
 });
 
